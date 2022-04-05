@@ -1,4 +1,10 @@
 venv
+*.sqlite3
+.DS_Store
+.idea
 *.pyc
-.env
 static
+images
+pictures
+minio-data
+data

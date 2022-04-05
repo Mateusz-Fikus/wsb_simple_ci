@@ -2,7 +2,7 @@ FROM python:3.10-alpine
 
 ENV PYTHONUNBUFFERED 1
 
-COPY ./requirements.txt /requirements.txt
+COPY requirements.txt /requirements.txt
 
 RUN apk add --update --no-cache postgresql-client jpeg-dev
 #virtual sets up alias for dependencies so we can remove it easier lately
@@ -14,4 +14,4 @@ RUN apk del .tmp-build-deps
 
 RUN mkdir /app
 WORKDIR /app
-COPY . /app/
+COPY backend /app/
