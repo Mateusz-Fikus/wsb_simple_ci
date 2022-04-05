@@ -6,11 +6,8 @@ on: [ push ]
 jobs:
   build:
     runs-on: ubuntu-latest
-
       steps:
-      # get the code under $GITHUB_WORKSPACE directory
       - uses: actions/checkout@v2
-      # get the python3
       - name: Set up Python 3
         uses: actions/setup-python@v3
       - name: Install deps
